@@ -1,0 +1,402 @@
+/* Variables */
+:root {
+    --bg-color: #0a0a0f;
+    --text-color: #ffffff;
+    --accent-color: #ffd700;
+    --accent-gradient: linear-gradient(135deg, #ffd700, #ff6b00);
+    --section-bg: rgba(255, 255, 255, 0.05);
+    --card-bg: rgba(255, 255, 255, 0.01);
+    --blur-effect: blur(10px);
+    --neon-shadow: 0 0 10px rgba(255, 215, 0, 0.5),
+                   0 0 20px rgba(255, 215, 0, 0.3),
+                   0 0 30px rgba(255, 215, 0, 0.1);
+}
+
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Sarpanch', sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Stars background */
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: radial-gradient(circle at center, rgba(10, 10, 15, 0) 0%, var(--bg-color) 100%);
+}
+
+.stars::before,
+.stars::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 50px 160px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 90px 40px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 130px 80px, #ffffff, rgba(0,0,0,0));
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    animation: twinkle 5s infinite;
+}
+
+.stars::after {
+    background-size: 300px 300px;
+    animation-delay: 2.5s;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+/* Layout */
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.skills-container {
+    width: 55vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.profile-section {
+    width: 20vw;
+    padding: 2rem;
+    background: var(--section-bg);
+    backdrop-filter: var(--blur-effect);
+    border-radius: 20px;
+    top: 2rem;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.1);
+    height: calc(100vh - 5rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Profile */
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto 2rem;
+    display: block;
+    border: 4px solid transparent;
+    background: var(--accent-gradient) border-box;
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) padding-box, 
+        linear-gradient(#fff 0 0);
+    mask: 
+        linear-gradient(#fff 0 0) padding-box, 
+        linear-gradient(#fff 0 0);
+    box-shadow: var(--neon-shadow);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--accent-color);
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: var(--neon-shadow);
+}
+
+.bio {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+/* Skills sections */
+.skills-section {
+    padding: 2rem;
+    background: var(--card-bg);
+    backdrop-filter: var(--blur-effect);
+    border-radius: 20px;
+}
+
+.skills-section h2 {
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: var(--neon-shadow);
+}
+
+.subsection {
+    margin-bottom: 1.5rem;
+}
+
+.subsection:last-child {
+    margin-bottom: 0;
+}
+
+.subsection h3 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.skills-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.skills-list li {
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.skills-list li a {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background: rgba(255, 215, 0, 0.05);
+    padding: 0.8rem 1.2rem;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.1);
+}
+
+.skills-list li a:hover {
+    color: var(--accent-color);
+    background: rgba(255, 215, 0, 0.15);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.skills-list li i {
+    font-size: 1.4rem;
+    transition: transform 0.3s ease;
+}
+
+.skills-list li:hover i {
+    transform: scale(1.2);
+}
+
+/* Style pour les logos techniques */
+.tech-logo {
+    width: 1.4rem;
+    height: 1.4rem;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.skills-list li:hover .tech-logo {
+    transform: scale(1.2);
+}
+
+/* Couleurs spécifiques pour les icônes non-colored */
+.skills-list li .fas {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.social-link {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #ffd700;
+    text-shadow: var(--neon-shadow);
+}
+
+/* Responsive design */
+@media (max-width: 1400px) {
+    .profile-section {
+        width: 400px;
+    }
+    .skills-container {
+        width: calc(100% - 450px);
+    }
+}
+
+@media (max-width: 1200px) {
+    .profile-section {
+        width: 350px;
+    }
+    .skills-container {
+        width: calc(100% - 400px);
+    }
+}
+
+@media (max-width: 1024px) {
+    main {
+        flex-direction: column-reverse;
+    }
+
+    .skills-container,
+    .profile-section {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .profile-section {
+        position: relative;
+        top: 0;
+        right: 0;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+
+    .skills-section {
+        padding: 1.5rem;
+    }
+}
+
+/* Loading Screen */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--bg-color);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 2s cubic-bezier(0.7, 0, 0.3, 1);
+    overflow: hidden;
+}
+
+.loading-screen::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 50px 160px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 90px 40px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 130px 80px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 160px 120px, #ffffff, rgba(0,0,0,0));
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    animation: scrollStars 8s linear infinite;
+}
+
+.loading-screen.slide-up {
+    transform: translateY(-100%);
+}
+
+@keyframes scrollStars {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+.loading-animation {
+    position: relative;
+    z-index: 1001;
+}
+
+/* Content */
+.content {
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.content.visible {
+    opacity: 1;
+}
+
+.favorite-quote {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin-top: 1rem;
+    font-style: italic;
+    font-family: 'Kite One', sans-serif;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
