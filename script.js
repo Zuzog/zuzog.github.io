@@ -1,6 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
   const loadingScreen = document.querySelector(".loading-screen");
   const content = document.querySelector(".content");
+  const scrollArrow = document.querySelector(".scroll-arrow");
+
+  // Fonction pour faire défiler vers la section
+  scrollArrow.addEventListener("click", () => {
+    const targetSection = document.getElementById("skills"); // Remplacez "skills" par l'ID de votre section
+    targetSection.scrollIntoView({ behavior: "smooth" });
+  });
 
   // Function to animate typing effect
   function typeEffect(element, text, delay) {
