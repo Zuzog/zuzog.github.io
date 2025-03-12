@@ -242,16 +242,10 @@ h1 {
     color: transparent;
 }
 
-/* Footer */
-footer {
-    padding: 2rem 0;
-    text-align: center;
-}
-
+/* Socials */
 .social-links {
     display: flex;
     justify-content: center;
-    
     gap: 1.5rem;
     margin-top: 2rem;
 }
