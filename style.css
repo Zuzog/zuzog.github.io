@@ -20,6 +20,8 @@
 }
 
 body {
+    background-color: #0a0a0f 0.2;
+    background-position: center;
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: 'Sarpanch', sans-serif;
@@ -28,7 +30,23 @@ body {
     position: relative;
     overflow-x: hidden;
 }
+.no-scroll {
+    overflow: hidden;
+    height: 100%;
+}
 
+.background-blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://i.postimg.cc/x8VQ8YC8/proxy-image.jpg);
+    background-position: center;
+    background-size: cover;
+    filter: blur(10px);
+    z-index: -1;
+}
 /* Stars background */
 .stars {
     position: fixed;
@@ -273,7 +291,6 @@ h1 {
 .scroll-arrow i {
     font-size: 2rem;
     color: transparent;
-    cursor: pointer;
     background: linear-gradient(135deg, #ffd700, #ff6b00);
     -webkit-background-clip: text;
     background-clip: text;
@@ -336,6 +353,16 @@ h1 {
 
     .scroll-arrow {
         display: flex;
+    }
+    .background-blur::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
     }
 }
 
