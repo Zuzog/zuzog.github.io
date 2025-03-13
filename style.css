@@ -6,34 +6,28 @@
     --accent-gradient: linear-gradient(135deg, #ffd700, #ff6b00);
     --section-bg: rgba(255, 255, 255, 0.05);
     --card-bg: rgba(255, 255, 255, 0.01);
-    --blur-effect: blur(5px);
+    --blur-effect: blur(3px);
     --neon-shadow: 0 0 10px rgba(255, 215, 0, 0.5),
                    0 0 20px rgba(255, 215, 0, 0.3),
                    0 0 30px rgba(255, 215, 0, 0.1);
 }
 
-/* Base styles */
+/* Style */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: 'Sarpanch', sans-serif;
     line-height: 1.6;
     min-height: 100vh;
-    position: relative;
     overflow-x: hidden;
 }
 
-.no-scroll {
-    overflow: hidden;
-    height: 100%;
-}
-
+/* Background */
 .background-blur {
     position: fixed;
     width: 100%;
@@ -47,19 +41,14 @@ body {
 /* Stars background */
 .stars {
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none;
 }
 
 .stars::before,
 .stars::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     background-image: 
@@ -70,19 +59,9 @@ body {
         radial-gradient(2px 2px at 130px 80px, #ffffff, rgba(0,0,0,0));
     background-repeat: repeat;
     background-size: 200px 200px;
-    animation: twinkle 5s infinite;
 }
 
-.stars::after {
-    background-size: 300px 300px;
-    animation-delay: 2.5s;
-}
 
-@keyframes twinkle {
-    0% { opacity: 0.5; }
-    50% { opacity: 1; }
-    100% { opacity: 0.5; }
-}
 
 /* Layout */
 .container {
@@ -113,7 +92,7 @@ main {
 
 .profile-section {
     position: fixed;
-    top:5vh;
+    top: 5vh;
     right: 2rem;
     width: 20vw;
     padding: 2rem;
@@ -224,7 +203,7 @@ h1 {
 }
 
 .skills-list li i {
-    font-size: 1.4rem;
+    font-size: 2rem;
     transition: transform 0.3s ease;
 }
 
@@ -271,7 +250,7 @@ h1 {
     text-shadow: var(--neon-shadow);
 }
 
-/* Flèche de défilement */
+/* Flèche de défilement (Mobile)*/
 .scroll-arrow {
     display: none;
     justify-content: center;
@@ -279,7 +258,6 @@ h1 {
     margin-top: 1rem;
     animation: blink 2s infinite;
 }
-
 .scroll-arrow i {
     font-size: 2rem;
     color: transparent;
@@ -290,7 +268,15 @@ h1 {
                  0 0 10px rgba(255, 165, 0, 0.5),
                  0 0 15px rgba(255, 165, 0, 0.3);
 }
-
+/* Citation favorite */
+.favorite-quote {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin-top: 1rem;
+    font-style: italic;
+    font-family: 'Kite One', sans-serif;
+}
 /* Responsive design */
 @media (max-width: 1400px) {
     .profile-section {
@@ -355,87 +341,16 @@ h1 {
     }
 }
 
-/* Loading Screen */
-.loading-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: var(--bg-color);
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 2s cubic-bezier(0.7, 0, 0.3, 1);
-    overflow: hidden;
-}
-
-.loading-screen::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 200%;
-    background-image: 
-        radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
-        radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0,0,0,0)),
-        radial-gradient(2px 2px at 50px 160px, #ffffff, rgba(0,0,0,0)),
-        radial-gradient(2px 2px at 90px 40px, #ffffff, rgba(0,0,0,0)),
-        radial-gradient(2px 2px at 130px 80px, #ffffff, rgba(0,0,0,0)),
-        radial-gradient(2px 2px at 160px 120px, #ffffff, rgba(0,0,0,0));
-    background-repeat: repeat;
-    background-size: 200px 200px;
-    animation: scrollStars 8s linear infinite;
-}
-
-.loading-screen.slide-up {
-    transform: translateY(-100%);
-}
-
-@keyframes scrollStars {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(-50%);
-    }
-}
-
-.loading-animation {
-    position: relative;
-    z-index: 1001;
-}
-
-/* Content */
-.content {
-    opacity: 0;
-    transition: opacity 1.5s ease-in-out;
-}
-
-.content.visible {
-    opacity: 1;
-}
-
-.favorite-quote {
-    text-align: center;
-    font-size: 1.5rem;
-    color: var(--accent-color);
-    margin-top: 1rem;
-    font-style: italic;
-    font-family: 'Kite One', sans-serif;
-}
+/* Animation */
 
 @keyframes blink {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 1;
     }
+
     50% {
         opacity: 0;
     }
-}
-
-.hidden {
-    display: none;
 }
