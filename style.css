@@ -6,7 +6,7 @@
     --accent-gradient: linear-gradient(135deg, #ffd700, #ff6b00);
     --section-bg: rgba(255, 255, 255, 0.05);
     --card-bg: rgba(255, 255, 255, 0.01);
-    --blur-effect: blur(10px);
+    --blur-effect: blur(5px);
     --neon-shadow: 0 0 10px rgba(255, 215, 0, 0.5),
                    0 0 20px rgba(255, 215, 0, 0.3),
                    0 0 30px rgba(255, 215, 0, 0.1);
@@ -20,8 +20,6 @@
 }
 
 body {
-    background-color: #0a0a0f 0.2;
-    background-position: center;
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: 'Sarpanch', sans-serif;
@@ -30,6 +28,7 @@ body {
     position: relative;
     overflow-x: hidden;
 }
+
 .no-scroll {
     overflow: hidden;
     height: 100%;
@@ -37,16 +36,14 @@ body {
 
 .background-blur {
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(https://i.postimg.cc/x8VQ8YC8/proxy-image.jpg);
+    background-image: url(assets/medias/proxy-image.webp);
     background-position: center;
     background-size: cover;
-    filter: blur(10px);
-    z-index: -1;
+    filter: var(--blur-effect);
 }
+
 /* Stars background */
 .stars {
     position: fixed;
@@ -55,7 +52,6 @@ body {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    background: radial-gradient(circle at center, rgba(10, 10, 15, 0) 0%, var(--bg-color) 100%);
 }
 
 .stars::before,
@@ -96,7 +92,6 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    position: relative;
 }
 
 main {
@@ -105,7 +100,6 @@ main {
     justify-content: space-around;
     gap: 2rem;
     width: 100%;
-    margin: 0 auto;
     position: relative;
 }
 
@@ -118,14 +112,16 @@ main {
 }
 
 .profile-section {
+    position: fixed;
+    top:5vh;
+    right: 2rem;
     width: 20vw;
     padding: 2rem;
     background: var(--section-bg);
     backdrop-filter: var(--blur-effect);
     border-radius: 20px;
-    top: 2rem;
     box-shadow: 0 0 20px rgba(255, 215, 0, 0.1);
-    height: calc(100vh - 5rem);
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -170,7 +166,6 @@ h1 {
 .skills-section {
     padding: 2rem;
     background: var(--card-bg);
-    backdrop-filter: var(--blur-effect);
     border-radius: 20px;
 }
 
@@ -218,17 +213,14 @@ h1 {
     color: var(--text-color);
     text-decoration: none;
     transition: all 0.3s ease;
-    background: rgba(255, 215, 0, 0.05);
+    background: rgba(255, 255, 255, 0.11);
     padding: 0.8rem 1.2rem;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(255, 215, 0, 0.1);
 }
 
 .skills-list li a:hover {
-    color: var(--accent-color);
-    background: rgba(255, 215, 0, 0.15);
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
-    transform: translateY(-2px);
+    background: rgba(255, 153, 0, 0.3);
 }
 
 .skills-list li i {
@@ -242,8 +234,8 @@ h1 {
 
 /* Style pour les logos techniques */
 .tech-logo {
-    width: 1.4rem;
-    height: 1.4rem;
+    width: 2rem;
+    height: 2rem;
     object-fit: contain;
     transition: transform 0.3s ease;
 }
@@ -341,16 +333,13 @@ h1 {
     .container {
         padding: 1rem;
     }
-
     .profile-pic {
         width: 150px;
         height: 150px;
     }
-
     .skills-section {
         padding: 1.5rem;
     }
-
     .scroll-arrow {
         display: flex;
     }
@@ -447,4 +436,6 @@ h1 {
     }
 }
 
-
+.hidden {
+    display: none;
+}

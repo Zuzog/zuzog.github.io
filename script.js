@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Show content
       setTimeout(() => {
+        loadingScreen.classList.add("hidden");
         content.classList.add("visible");
 
         // Remove the no-scroll class to allow scrolling
