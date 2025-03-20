@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="progress-bar"></div>
+
+    <!-- Menu Toggle Button -->
+    <button class="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-content">
+        <div class="sidebar-profile">
+          <img
+            src="https://i.postimg.cc/Vv98MzKP/182337.jpg"
+            alt="Photo de profil"
+          />
+          <h1>Zuzog</h1>
+          <p class="subtitle">Théo PIERRE</p>
+        </div>
+
+        <div class="sidebar-info">
+          <h3>À Propos</h3>
+          <ul class="language-list">
+            <li><i class="fas fa-language"></i> Français (Natif)</li>
+            <li>
+              <i class="fas fa-language"></i> Anglais (Compétence Technique
+              Complète)
+            </li>
+          </ul>
+          <p><i class="fas fa-birthday-cake"></i> 23 ans</p>
+        </div>
+
+        <div class="sidebar-info">
+          <h3>Contact</h3>
+          <p><i class="fas fa-envelope"></i> zuzog.contact@pm.me</p>
+          <p><i class="fas fa-phone"></i> 07 82 91 32 93</p>
+        </div>
+
+        <div class="sidebar-info">
+          <h3>Réseaux Sociaux</h3>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/thpierre/" target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="https://github.com/Zuzog" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+      <ul>
+        <li><a href="#skills">Compétences</a></li>
+        <li><a href="#softskills">Soft Skills</a></li>
+        <li><a href="#experience">Expériences</a></li>
+        <li><a href="#education">Formation</a></li>
+        <li><a href="#projects">Projets</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="hero">
+        <div class="profile-container">
+          <div class="quote">
+            <i class="fas fa-quote-left"></i>
+            <p>
+              "We were just playing, we didn't know we were making memories"
+            </p>
+          </div>
+        </div>
+      </header>
+
+      <section id="skills" class="section">
+        <h2>Compétences</h2>
+        <div class="skills-container">
+          <div class="skill-category" data-category="network">
+            <h3>Réseau & Systèmes</h3>
+            <p>Cliquez pour voir les détails</p>
+          </div>
+          <div class="skill-category" data-category="development">
+            <h3>Développement</h3>
+            <p>Cliquez pour voir les détails</p>
+          </div>
+          <div class="skill-category" data-category="additional">
+            <h3>Compétences Supplémentaires</h3>
+            <p>Cliquez pour voir les détails</p>
+          </div>
+        </div>
+
+        <div class="skill-details">
+          <div class="skill-detail-content" data-category="network">
+            <h3>Réseau & Systèmes</h3>
+            <div class="skill-list">
+              <div class="skill-item">
+                <i class="fas fa-network-wired"></i>
+                <div class="skill-info">
+                  <h4>Administration Réseau</h4>
+                  <p>
+                    Configuration et maintenance des infrastructures réseau,
+                    architecture réseau, administration des systèmes Windows et
+                    Linux
+                  </p>
+                </div>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-server"></i>
+                <div class="skill-info">
+                  <h4>Administration Système</h4>
+                  <p>
+                    Gestion des serveurs, virtualisation avec VMware ESXI et
+                    Proxmox, administration des systèmes Windows et Linux
+                  </p>
+                </div>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-shield-alt"></i>
+                <div class="skill-info">
+                  <h4>Sécurité</h4>
+                  <p>
+                    Protection des systèmes et des réseaux, monitoring avec
+                    Zabbix et Grafana
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="tools-section">
+              <h4>Outils et Logiciels</h4>
+              <div class="tools-grid">
+                <a
+                  href="https://www.vmware.com/products/esxi-and-esx.html"
+                  target="_blank"
+                  class="tool-item"
+                >
+                  <i class="fas fa-server"></i>
+                  <span>VMware ESXI</span>
+                </a>
+                <a
+                  href="https://www.proxmox.com/"
+                  target="_blank"
+                  class="tool-item"
+                >
+                  <i class="fas fa-server"></i>
+                  <span>Proxmox</span>
+                </a>
+                <a
+                  href="https://httpd.apache.org/"
+                  target="_blank"
+                  class="tool-item"
+                >
+                  <i class="fas fa-server"></i>
+                  <span>Apache</span>
+                </a>
+                <a href="https://nginx.org/" target="_blank" class="tool-item">
+                  <i class="fas fa-server"></i>
+                  <span>NGInx</span>
+                </a>
+                <a
+                  href="https://www.ansible.com/"
+                  target="_blank"
+                  class="tool-item"
+                >
+                  <i class="fas fa-robot"></i>
+                  <span>Ansible</span>
+                </a>
+                <a
+                  href="https://glpi-project.org/"
+                  target="_blank"
+                  class="tool-item"
+                >
+                  <i class="fas fa-tools"></i>
+                  <span>GLPI</span>
+                </a>
+                <a
+                  href="https://nextcloud.com/"
+                  target="_blank"
+                  class="tool-item"
+                >
+                  <i class="fas fa-cloud"></i>
+                  <span>Nextcloud</span>
+                </a>
+                <a
+                  href="https://www.zabbix.com/"
+                  target="_blank"
+                  class="tool-item"
+                >
+                  <i class="fas fa-chart-line"></i>
+                  <span>Zabbix</span>
+                </a>
+                <a
+                  href="https://grafana.com/"
+                  target="_blank"
+                  class="tool-item"
+                >
+                  <i class="fas fa-chart-bar"></i>
+                  <span>Grafana</span>
+                </a>
+                <a href="https://tabby.sh/" target="_blank" class="tool-item">
+                  <i class="fas fa-terminal"></i>
+                  <span>Tabby</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-detail-content" data-category="development">
+            <h3>Développement</h3>
+            <div class="skill-list">
+              <div class="skill-item">
+                <i class="fas fa-code"></i>
+                <div class="skill-info">
+                  <h4>Développement Web</h4>
+                  <p>
+                    Développement front-end et back-end avec HTML, CSS,
+                    JavaScript, PHP, Symfony et WordPress
+                  </p>
+                </div>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-database"></i>
+                <div class="skill-info">
+                  <h4>Base de données</h4>
+                  <p>
+                    Gestion et optimisation des données avec MySQL et MariaDB
+                  </p>
+                </div>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-terminal"></i>
+                <div class="skill-info">
+                  <h4>Scripting</h4>
+                  <p>Automatisation avec Bash, PowerShell et Python</p>
+                </div>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-code"></i>
+                <div class="skill-info">
+                  <h4>API REST</h4>
+                  <p>Développement et intégration d'APIs RESTful</p>
+                </div>
+              </div>
+            </div>
+            <div class="tools-section">
+              <h4>Langages & Frameworks/CMS</h4>
+              <div class="tools-grid">
+                <a
+                  href="https://developer.mozilla.org/fr/docs/Web/HTML"
+                  target="_blank"
+                  class="tool-item"
+                >
+                  <i class="fab fa-html5"></i>
+                  <span>HTML</span>
+                </a>
+                <a
+                  href="https://developer.mozilla.org/fr/docs/Web/CSS"
+                  target="_blank"
+                  class="tool-item"
+                >
+                  <i class="fab fa-css3-alt"></i>
+                  <span>CSS</span>
+                </a>
+                <a
+                  href="https://developer.mozilla.org/fr/docs/Web/JavaScript"
+                  target="_blank"
+                  class="tool-item"
+                >
+                  <i class="fab fa-js"></i>
+                  <span>JavaScript</span>
+                </a>
+                <a href="https://vuejs.org/" target="_blank" class="tool-item">
+                  <i class="fab fa-vuejs"></i>
+                  <span>Vue.js</span>
+                </a>
+                <a
+                  href="https://www.python.org/"
+                  target="_blank"
+                  class="tool-item"
+                >
+                  <i class="fab fa-python"></i>
+                  <span>Python</span>
+                </a>
+                <a
+                  href="https://www.php.net/"
+                  target="_blank"
+                  class="tool-item"
+                >
+                  <i class="fab fa-php"></i>
+                  <span>PHP</span>
+                </a>
+                <a
+                  href="https://symfony.com/"
+                  target="_blank"
+                  class="tool-item"
+                >
+                  <i class="fab fa-symfony"></i>
+                  <span>Symfony</span>
+                </a>
+                <a
+                  href="https://wordpress.org/"
+                  target="_blank"
+                  class="tool-item"
+                >
+                  <i class="fab fa-wordpress"></i>
+                  <span>WordPress</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="tools-section">
+              <h4>Outils et Logiciels</h4>
+              <div class="tools-grid">
+                <a
+                  href="https://www.mysql.com/"
+                  target="_blank"
+                  class="tool-item"
+                >
+                  <i class="fas fa-database"></i>
+                  <span>MySQL</span>
+                </a>
+                <a
+                  href="https://mariadb.org/"
+                  target="_blank"
+                  class="tool-item"
+                >
+                  <i class="fas fa-database"></i>
+                  <span>MariaDB</span>
+                </a>
+                <a href="https://dbeaver.io/" target="_blank" class="tool-item">
+                  <i class="fas fa-database"></i>
+                  <span>DBeaver</span>
+                </a>
+                <a href="https://cursor.sh/" target="_blank" class="tool-item">
+                  <i class="fas fa-code"></i>
+                  <span>Cursor</span>
+                </a>
+                <a
+                  href="https://insomnia.rest/"
+                  target="_blank"
+                  class="tool-item"
+                >
+                  <i class="fas fa-plug"></i>
+                  <span>Insomnia</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-detail-content" data-category="additional">
+            <h3>Compétences Supplémentaires</h3>
+            <div class="skill-list">
+              <div class="skill-item">
+                <i class="fas fa-tools"></i>
+                <div class="skill-info">
+                  <h4>DevOps</h4>
+                  <p>
+                    Automatisation et déploiement continu avec Git, GitHub,
+                    GitLab et Ansible
+                  </p>
+                </div>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-file-alt"></i>
+                <div class="skill-info">
+                  <h4>Documentation</h4>
+                  <p>
+                    Création de documentation technique et méthodologie Agile
+                  </p>
+                </div>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-paint-brush"></i>
+                <div class="skill-info">
+                  <h4>Design</h4>
+                  <p>Conception d'interfaces avec Figma</p>
+                </div>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-shield-alt"></i>
+                <div class="skill-info">
+                  <h4>Conformité RGPD</h4>
+                  <p>Protection des données personnelles et confidentialité</p>
+                </div>
+              </div>
+            </div>
+            <div class="tools-section">
+              <h4>Outils et Logiciels</h4>
+              <div class="tools-grid">
+                <a
+                  href="https://git-scm.com/"
+                  target="_blank"
+                  class="tool-item"
+                >
+                  <i class="fab fa-git-alt"></i>
+                  <span>Git</span>
+                </a>
+                <a href="https://github.com/" target="_blank" class="tool-item">
+                  <i class="fab fa-github"></i>
+                  <span>GitHub</span>
+                </a>
+                <a
+                  href="https://about.gitlab.com/"
+                  target="_blank"
+                  class="tool-item"
+                >
+                  <i class="fab fa-gitlab"></i>
+                  <span>GitLab</span>
+                </a>
+                <a
+                  href="https://www.figma.com/"
+                  target="_blank"
+                  class="tool-item"
+                >
+                  <i class="fab fa-figma"></i>
+                  <span>Figma</span>
+                </a>
+                <a
+                  href="https://www.vim.org/"
+                  target="_blank"
+                  class="tool-item"
+                >
+                  <i class="fas fa-terminal"></i>
+                  <span>Vim</span>
+                </a>
+                <a href="https://trello.com/" target="_blank" class="tool-item">
+                  <i class="fab fa-trello"></i>
+                  <span>Trello</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="softskills" class="section">
+        <h2>Soft Skills</h2>
+        <div class="softskills-grid">
+          <div class="skill-item">
+            <i class="fas fa-user-clock"></i>
+            <div class="skill-info">
+              <h4>Gestion du Temps</h4>
+              <p>Organisation efficace des tâches et respect des délais</p>
+            </div>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-home"></i>
+            <div class="skill-info">
+              <h4>Télétravail</h4>
+              <p>Adaptation et efficacité en travail à distance</p>
+            </div>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-user-check"></i>
+            <div class="skill-info">
+              <h4>Autonomie</h4>
+              <p>Capacité à travailler de manière indépendante et proactive</p>
+            </div>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-lock"></i>
+            <div class="skill-info">
+              <h4>Confidentialité</h4>
+              <p>
+                Respect strict des informations sensibles et des données clients
+              </p>
+            </div>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-comments"></i>
+            <div class="skill-info">
+              <h4>Communication</h4>
+              <p>Expression claire et adaptation au contexte professionnel</p>
+            </div>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-users"></i>
+            <div class="skill-info">
+              <h4>Travail d'Équipe</h4>
+              <p>Collaboration efficace et contribution positive aux projets</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section">
+        <h2>Expériences Professionnelles</h2>
+        <div class="experience-grid">
+          <a href="https://www.cegelec.fr/" target="_blank" class="skill-item">
+            <div class="company-logo">
+              <img src="assets/logos/CEGELEC_Logo.png" alt="Logo Cegelec" />
+            </div>
+            <div class="skill-info">
+              <h4>Électricien-Monteur</h4>
+              <p>Cegelec Angers Infras</p>
+              <ul class="experience-details">
+                <li><i class="fas fa-briefcase"></i> CDI</li>
+                <li><i class="fas fa-calendar"></i> Févr. 2024 - Oct. 2024</li>
+                <li><i class="fas fa-clock"></i> 9 mois</li>
+                <li>
+                  <i class="fas fa-map-marker-alt"></i> Angers, Pays de la
+                  Loire, France
+                </li>
+                <li><i class="fas fa-building"></i> Sur site</li>
+              </ul>
+            </div>
+          </a>
+
+          <a href="https://nganalytics.fr/" target="_blank" class="skill-item">
+            <div class="company-logo">
+              <img src="assets/logos/NGA_Logo.png" alt="Logo NGAnalytics" />
+            </div>
+            <div class="skill-info">
+              <h4>Apprenti Technicien système & réseau</h4>
+              <p>NGAnalytics</p>
+              <ul class="experience-details">
+                <li><i class="fas fa-briefcase"></i> Contrat en alternance</li>
+                <li><i class="fas fa-calendar"></i> Sept. 2021 - Févr. 2024</li>
+                <li><i class="fas fa-clock"></i> 2 ans 6 mois</li>
+                <li>
+                  <i class="fas fa-map-marker-alt"></i> Ruaudin, Pays de la
+                  Loire, France
+                </li>
+                <li><i class="fas fa-building"></i> Hybride</li>
+              </ul>
+            </div>
+          </a>
+
+          <a href="https://www.citeos.fr/" target="_blank" class="skill-item">
+            <div class="company-logo">
+              <img src="assets/logos/CITEOS_Logo.png" alt="Logo Citeos" />
+            </div>
+            <div class="skill-info">
+              <h4>Apprenti électricien</h4>
+              <p>Citeos</p>
+              <ul class="experience-details">
+                <li><i class="fas fa-briefcase"></i> Contrat en alternance</li>
+                <li><i class="fas fa-calendar"></i> Sept. 2019 - Août 2021</li>
+                <li><i class="fas fa-clock"></i> 2 ans</li>
+                <li>
+                  <i class="fas fa-map-marker-alt"></i> Le Mans, Pays de la
+                  Loire, France
+                </li>
+                <li><i class="fas fa-building"></i> Sur site</li>
+              </ul>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section id="education" class="section">
+        <h2>Formations</h2>
+        <div class="education-grid">
+          <a href="https://www.eseo.fr/" target="_blank" class="skill-item">
+            <div class="school-logo">
+              <img src="assets/logos/ESEO_Logo.png" alt="Logo ESEO" />
+            </div>
+            <div class="skill-info">
+              <h4>Cycle Ingénieur en Apprentissage</h4>
+              <p>ESEO</p>
+              <ul class="education-details">
+                <li>
+                  <i class="fas fa-certificate"></i> BAC +5 - Titre Ingénieur
+                </li>
+                <li><i class="fas fa-calendar"></i> Sept. 2025 - Août 2028</li>
+                <li>
+                  <i class="fas fa-hourglass-half"></i>À venir - Dossier Accepté
+                </li>
+              </ul>
+            </div>
+          </a>
+          <a href="https://www.ekod.school/" target="_blank" class="skill-item">
+            <div class="school-logo">
+              <img src="assets/logos/EKOD_Logo.png" alt="Logo EKOD" />
+            </div>
+            <div class="skill-info">
+              <h4>Développeur Intégrateur Web</h4>
+              <p>EKOD</p>
+              <ul class="education-details">
+                <li><i class="fas fa-certificate"></i> Bac +2</li>
+                <li><i class="fas fa-calendar"></i> Oct. 2024 - Juil. 2025</li>
+                <li><i class="fas fa-check-circle"></i> En cours</li>
+              </ul>
+            </div>
+          </a>
+          <a
+            href="https://www.fabacademy-pdl.fr/nos-centres/le-mans"
+            target="_blank"
+            class="skill-item"
+          >
+            <div class="school-logo">
+              <img src="assets/logos/UIMM_Logo.png" alt="Logo UIMM" />
+            </div>
+            <div class="skill-info">
+              <h4>SIO - Option Systèmes & Réseaux</h4>
+              <p>Fab' Academy du Pôle formation UIMM</p>
+              <ul class="education-details">
+                <li><i class="fas fa-certificate"></i> Bac +2 - BTS</li>
+                <li><i class="fas fa-calendar"></i> Sept. 2021 - Juin 2023</li>
+                <li><i class="fas fa-trophy"></i> Diplôme Obtenu</li>
+              </ul>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <h2>Projets</h2>
+        <div class="projects-grid"></div>
+      </section>
+
+      <footer>
+        <div class="footer-content">
+          <p>&copy; 2024 Zuzog. Tous droits réservés.</p>
+        </div>
+      </footer>
+
+      <!-- Flèche de scroll -->
+      <div class="scroll-arrow">
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </main>
+
+    <script src="script/script.js"></script>
+  </body>
+</html>
