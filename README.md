@@ -54,6 +54,7 @@ portfolio/
 ├── assets/
 │   ├── logos/         # Logos des entreprises et écoles
 │   └── background2.webp
+│   └── favicon.png
 ├── style/
 │   └── style.css      # Styles CSS
 ├── script/
