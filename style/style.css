@@ -209,6 +209,7 @@ h4,
     padding: 2.5rem;
     border-right: 1px solid var(--glass-border);
     z-index: 100;
+    overflow-y: auto;
 }
 
 .sidebar-content {
