@@ -815,6 +815,7 @@ footer {
         opacity: 1;
         visibility: visible;
         transform: translateX(0);
+        padding-bottom: 4rem;
     }
 
     .sidebar-content {
