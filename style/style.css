@@ -21,6 +21,12 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Spline Sans', sans-serif;
+    -ms-overflow-style: none;  /* IE et Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+/* Masquer les scrollbars pour Chrome, Safari et Opera */
+::-webkit-scrollbar {
+    display: none;
 }
 
 body {
@@ -182,7 +188,7 @@ h4,
     position: fixed;
     right: 0;
     top: 0;
-    width: 2px;
+    width: 3px;
     height: 100vh;
     background: var(--accent-gradient);
     z-index: 1000;
@@ -319,6 +325,7 @@ h4,
 
 .social-links a {
     color: var(--text-color);
+    text-decoration: none;
     font-size: 1.8rem;
     transition: transform 0.2s ease, opacity 0.2s ease;
     will-change: transform;
@@ -703,7 +710,6 @@ h4,
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
-    margin-top: 1rem;
 }
 
 .education-details li,
@@ -711,9 +717,17 @@ h4,
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    margin-bottom: 0;
     font-size: 0.9rem;
     opacity: 0.8;
+}
+
+.experience-details li i,
+.education-details li i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
 }
 
 .projects-grid .skill-item {
