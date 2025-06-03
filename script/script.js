@@ -189,3 +189,16 @@ scrollArrow.addEventListener("click", () => {
 document.addEventListener("DOMContentLoaded", updateScrollArrow);
 window.addEventListener("scroll", updateScrollArrow);
 window.addEventListener("resize", updateScrollArrow);
+
+// Gestion du scroll pour le call to action
+const scrollCta = document.querySelector(".scroll-cta");
+scrollCta.addEventListener("click", () => {
+  const firstSection = document.querySelector("#skills");
+  const navHeight = document.querySelector(".top-nav").offsetHeight;
+  const targetPosition = firstSection.offsetTop - navHeight - 20;
+
+  window.scrollTo({
+    top: targetPosition,
+    behavior: "smooth",
+  });
+});
