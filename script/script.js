@@ -1,3 +1,7 @@
+// Variables
+const lightSwitch = document.getElementById("light-switch").addEventListener("change", switchLightSwitch);
+const theme = localStorage.getItem('theme');
+
 // Barre de progression
 function updateProgressBar() {
   const winScroll =
@@ -202,3 +206,26 @@ scrollCta.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+// Light Switch
+function getTheme() {
+  if (theme === 'dark') {
+    document.documentElement.setAttribute("data-theme", "dark");
+    document.getElementById("light-switch").checked = true;
+  } else {
+    document.documentElement.removeAttribute("data-theme");
+  }
+}
+function switchLightSwitch() {
+  var isChecked = document.getElementById("light-switch").checked;
+  if (isChecked) {
+    document.documentElement.setAttribute("data-theme", "dark");
+    localStorage.setItem('theme', 'dark');
+  } else {
+    document.documentElement.removeAttribute("data-theme");
+    localStorage.setItem('theme', 'light');
+  }
+};
+
+getTheme();
+switchLightSwitch();
