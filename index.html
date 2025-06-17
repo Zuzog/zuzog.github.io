@@ -20,12 +20,12 @@
     <div class="progress-bar"></div>
 
     <!-- Menu Toggle Button -->
-    <button class="menu-toggle">
-      <i class="fas fa-bars"></i>
+    <button id="sidebar-button" class="sidebar-toggle">
+      <i class="fas fa-home"></i>
     </button>
 
     <!-- Sidebar -->
-    <aside class="sidebar">
+    <aside id="sidebar" class="sidebar">
       <div class="sidebar-content">
         <div class="sidebar-profile">
           <img
@@ -73,11 +73,11 @@
 
     <!-- Top Navigation -->
     <nav class="top-nav">
-      <label class="light-switch">
+      <label id="light-switch-label" class="light-switch">
         <input id="light-switch" type="checkbox">
         <span class="light-switch-slider"></span>
     </label>
-      <ul>
+      <ul id="top-nav-items" class="top-nav-items">
         <li><a href="#skills">Compétences</a></li>
         <li><a href="#softskills">Soft Skills</a></li>
         <li><a href="#experience">Expériences</a></li>
@@ -811,7 +811,7 @@
       </footer>
 
       <!-- Flèche de scroll -->
-      <div class="scroll-arrow">
+      <div id="scroll-arrow" class="scroll-arrow">
         <i class="fas fa-chevron-down"></i>
       </div>
     </main>
