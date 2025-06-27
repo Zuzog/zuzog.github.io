@@ -276,6 +276,15 @@ h4,
     transform: scale(1.05);
 }
 
+.sidebar-info a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.sidebar-info a:hover {
+    color: var(--accent-color);
+}
+
 .sidebar-info {
     margin-bottom: 2rem;
 }
