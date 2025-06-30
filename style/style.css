@@ -105,8 +105,6 @@ body::before {
 .skill-detail-content,
 .education-grid .skill-item,
 .experience-grid .skill-item,
-.school-logo,
-.company-logo,
 .skill-item,
 .top-nav,
 .tool-item,
@@ -718,7 +716,7 @@ h4,
 .company-logo img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .education-details,
