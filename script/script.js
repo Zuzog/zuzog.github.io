@@ -136,13 +136,11 @@ scrollCta.addEventListener("click", () => {
 sidebarToggle.addEventListener("click", () => {
   sidebar.classList.toggle("active");
   document.body.classList.toggle("sidebar-open");
-  updateScrollArrow();
 });
 document.addEventListener("click", (e) => {
   if (!sidebar.contains(e.target) && !sidebarToggle.contains(e.target)) {
     sidebar.classList.remove("active");
     document.body.classList.remove("sidebar-open");
-    updateScrollArrow();
   }
 });
 
@@ -158,81 +156,6 @@ if (window.innerWidth <= 980) {
   });
 }
 
-// Scroll arrow
-function updateScrollArrow() {
-  if (window.innerWidth <= 768) {
-    const currentScroll = window.scrollY;
-    const windowHeight = window.innerHeight;
-    const documentHeight = document.documentElement.scrollHeight;
-    const scrollBottom = currentScroll + windowHeight;
-
-    // Display scroll arrow by default
-    if (!document.body.classList.contains("sidebar-open")) {
-      scrollArrow.style.display = "flex";
-      return;
-    }
-
-    // If we are near the bottom of the page, hide the scroll arrow
-    if (scrollBottom >= documentHeight - 100) {
-      scrollArrow.style.display = "none";
-      return;
-    }
-
-    // Show/hide the scroll arrow
-    if (
-      currentSectionIndex >= 0 &&
-      currentSectionIndex < sections.length - 1 &&
-      !document.body.classList.contains("sidebar-open")
-    ) {
-      scrollArrow.style.display = "flex";
-    } else {
-      scrollArrow.style.display = "none";
-    }
-  } else {
-    scrollArrow.style.display = "none";
-  }
-}
-// Scroll to the next section
-scrollArrow.addEventListener("click", () => {
-  const currentScroll = window.scrollY;
-  const windowHeight = window.innerHeight;
-  // If we are at the top of the page, scroll to the first section
-  if (currentScroll < 100) {
-    const firstSection = sections[0];
-    const navHeight = document.querySelector(".top-nav").offsetHeight;
-    const targetPosition = firstSection.offsetTop - navHeight - 20;
-    window.scrollTo({
-      top: targetPosition,
-      behavior: "smooth",
-    });
-    return;
-  }
-
-  // Find the current section
-  let currentSectionIndex = -1;
-  sections.forEach((section, index) => {
-    const rect = section.getBoundingClientRect();
-    if (rect.top <= windowHeight / 2 && rect.bottom >= windowHeight / 2) {
-      currentSectionIndex = index;
-    }
-  });
-
-  // Scroll to the next section
-  if (currentSectionIndex >= 0 && currentSectionIndex < sections.length - 1) {
-    const nextSection = sections[currentSectionIndex + 1];
-    const navHeight = document.querySelector(".top-nav").offsetHeight;
-    const targetPosition = nextSection.offsetTop - navHeight - 20;
-
-    window.scrollTo({
-      top: targetPosition,
-      behavior: "smooth",
-    });
-  }
-});
-
 // Execution / Initialization
-document.addEventListener("DOMContentLoaded", updateScrollArrow);
-window.addEventListener("scroll", updateScrollArrow);
-window.addEventListener("resize", updateScrollArrow);
 getTheme();
 switchLightSwitch();

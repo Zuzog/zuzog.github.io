@@ -89,7 +89,6 @@ body::before {
 .education-grid .skill-item,
 .experience-grid .skill-item,
 .top-nav,
-.scroll-arrow,
 .sidebar-toggle {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -111,7 +110,6 @@ body::before {
 .skill-item,
 .top-nav,
 .tool-item,
-.scroll-arrow,
 .sidebar-toggle {
     border: 1px solid var(--glass-border);
 }
@@ -159,8 +157,7 @@ h4,
 .tool-item i,
 .tool-item:hover i,
 .top-nav a,
-.top-nav a:hover,
-.scroll-arrow i {
+.top-nav a:hover {
     background: var(--accent-gradient);
     -webkit-background-clip: text;
     background-clip: text;
@@ -230,6 +227,7 @@ h4,
 /* Sidebar Toggle */
 .sidebar-toggle {
     display: none;
+    z-index: 1000;
 }
 
 /* Sidebar */
@@ -807,6 +805,7 @@ h4,
 .project-button {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.8rem;
     padding: 0.8rem 1.2rem;
     background: var(--glass-bg);
@@ -816,6 +815,9 @@ h4,
     text-decoration: none;
     font-size: 0.9rem;
     transition: all 0.3s ease;
+    width: 200px;
+    text-align: center;
+    white-space: nowrap;
 }
 
 .project-button:hover {
@@ -873,11 +875,6 @@ footer {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-}
-
-/* Mobile Scroll Arrow */
-.scroll-arrow {
-    display: none;
 }
 
 /* Keyframes */
@@ -958,25 +955,6 @@ footer {
 
     .section h2 {
         font-size: 2.4rem;
-    }
-
-    .scroll-arrow {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: fixed;
-        bottom: 2rem;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 1000;
-        background: var(--glass-bg);
-        border-radius: var(--radius-rounded);
-        width: 3.5rem;
-        height: 3.5rem;
-    }
-    .scroll-arrow i {
-        font-size: 1.5rem;
-        animation: pulse 3s infinite;
     }
 
     .top-nav {
@@ -1114,11 +1092,16 @@ footer {
         gap: 1rem;
         text-align: center;
     }
+
+    .experience-details {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+
     .experience-details li,
     .education-details li,
     .projects-grid .experience-details li {
-        width: 100%;
-        justify-content: center;
         font-size: 1rem;
     }
     .experience-details li i {
@@ -1169,7 +1152,7 @@ footer {
 
     .projects-grid .project-links {
         order: 3;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         border-left: none;
         border-top: 1px solid var(--glass-border);
@@ -1201,9 +1184,6 @@ footer {
 @media (max-width: 1281px) {    
     .project-item {
         flex-direction: column;
-    }
-    .projects-grid .project-links {
-        flex-direction: row;
     }
     .projects-grid .project-links a {
         width: 100%;
